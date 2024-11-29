@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="filterCell" id="gTV-IL-0wX" customClass="FilterCell" customModule="exploreTest" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="762" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="762" height="44"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="BV0-6k-neJ">
+                        <rect key="frame" x="20" y="12" width="722" height="20"/>
+                        <subviews>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7Ii-cS-klq">
+                                <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="CCH-jn-761"/>
+                                    <constraint firstAttribute="width" constant="20" id="dVN-dy-ci2"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WORK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WNv-MD-n5m">
+                                <rect key="frame" x="0.0" y="0.0" width="722" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.95686274770000002" green="0.95686274770000002" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rightClick" translatesAutoresizingMaskIntoConstraints="NO" id="17m-d0-7pt">
+                                <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="Frb-Ch-UCh"/>
+                                    <constraint firstAttribute="height" constant="20" id="ZUF-EH-GeC"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="17m-d0-7pt" firstAttribute="centerY" secondItem="BV0-6k-neJ" secondAttribute="centerY" id="rRU-WC-3ag"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" red="0.22376868129999999" green="0.2351079881" blue="0.24313870069999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="BV0-6k-neJ" secondAttribute="bottom" constant="12" id="bOS-0P-hqK"/>
+                <constraint firstItem="BV0-6k-neJ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="cS1-37-NqH"/>
+                <constraint firstAttribute="trailing" secondItem="BV0-6k-neJ" secondAttribute="trailing" constant="20" id="cfT-rA-YTo"/>
+                <constraint firstItem="BV0-6k-neJ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="12" id="ypd-LO-RI3"/>
+            </constraints>
+            <size key="customSize" width="762" height="121"/>
+            <connections>
+                <outlet property="leftImage" destination="7Ii-cS-klq" id="jiJ-uI-hhA"/>
+                <outlet property="rightImage" destination="17m-d0-7pt" id="CKi-16-Tvr"/>
+                <outlet property="titleLabel" destination="WNv-MD-n5m" id="NqE-V1-OyL"/>
+            </connections>
+            <point key="canvasLocation" x="-47.328244274809158" y="43.661971830985919"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="rightClick" width="12.333333015441895" height="7.6666665077209473"/>
+    </resources>
+</document>
